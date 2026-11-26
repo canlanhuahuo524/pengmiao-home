@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭淼 · 个人求职主页｜以数字技术扎根乡土</title>
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<style>
+:root{
+  --navy:#0E2C4B;
+  --navy-2:#163A5F;
+  --ink:#16202B;
+  --muted:#5A6A7A;
+  --line:#DFE6EE;
+  --bg:#FBFCFF;
+  --tint:#F1F5FA;
+  --accent:#B5462F;
+  --serif:"Noto Serif SC","Songti SC","SimSun",serif;
+  --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+
+/* 顶栏 */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(251,252,255,.92);
+  backdrop-filter:saturate(1.4) blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.brand{display:flex;align-items:baseline;gap:12px}
+.brand strong{font-family:var(--serif);font-size:19px;letter-spacing:.18em;color:var(--navy)}
+.brand span{font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+nav ul{display:flex;gap:26px;list-style:none}
+nav a{
+  font-size:13.5px;color:var(--muted);text-decoration:none;letter-spacing:.04em;
+  padding-bottom:3px;border-bottom:1px solid transparent;transition:.22s;
+}
+nav a:hover{color:var(--navy)}
+nav a.on{color:var(--navy);border-bottom-color:var(--accent)}
+
+/* 首屏 */
+.hero{padding:76px 0 60px;border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.35fr .85fr;gap:64px;align-items:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12.5px;letter-spacing:.16em;color:var(--muted);margin-bottom:26px;
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--accent)}
+h1{
+  font-family:var(--serif);font-weight:700;font-size:52px;line-height:1.28;
+  color:var(--navy);letter-spacing:.02em;
+}
+h1 em{font-style:normal;color:var(--accent)}
+.sub{
+  font-family:var(--serif);font-size:23px;color:var(--navy-2);margin-top:6px;letter-spacing:.04em;
+}
+.lead{margin-top:26px;font-size:14.5px;color:var(--muted);max-width:560px}
+.intent{
+  margin-top:30px;display:flex;flex-wrap:wrap;gap:10px;
+}
+.tag{
+  font-size:12.5px;color:var(--navy);background:#fff;border:1px solid var(--line);
+  padding:6px 13px;border-radius:2px;letter-spacing:.03em;
+}
+.tag.hot{border-color:rgba(181,70,47,.35);color:var(--accent);background:#FDF6F4}
+
+/* 数据卡 */
+.stats{
+  background:var(--navy);color:#fff;padding:34px 34px 26px;
+  box-shadow:0 24px 50px -30px rgba(14,44,75,.6);
+}
+.stats .cap{font-size:11.5px;letter-spacing:.22em;color:#9FB4C8;margin-bottom:22px}
+.stats .grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 18px}
+.stat b{display:block;font-family:var(--serif);font-size:30px;line-height:1.2;letter-spacing:.01em}
+.stat b i{font-style:normal;font-size:15px;margin-left:2px;color:#9FB4C8}
+.stat p{font-size:12px;color:#C3D2E0;margin-top:4px;letter-spacing:.04em}
+.stats .foot{margin-top:24px;padding-top:16px;border-top:1px solid rgba(255,255,255,.14);
+  font-size:11.5px;color:#9FB4C8;letter-spacing:.04em}
+
+/* 章节 */
+section{padding:70px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;
+  padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:38px}
+.sec-head .no{font-size:12px;letter-spacing:.2em;color:var(--accent);margin-bottom:8px}
+.sec-head h2{font-family:var(--serif);font-size:30px;font-weight:600;color:var(--navy);letter-spacing:.03em}
+.sec-head p{font-size:13px;color:var(--muted);max-width:430px;text-align:right}
+
+/* 课程 */
+.course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.course{
+  background:#fff;border:1px solid var(--line);padding:24px 24px 22px;position:relative;height:100%;
+  transition:transform .25s,box-shadow .25s,border-color .25s;
+}
+.course:hover{transform:translateY(-4px);box-shadow:0 18px 34px -24px rgba(14,44,75,.45);border-color:#C9D6E4}
+.course .k{font-size:11.5px;letter-spacing:.16em;color:var(--accent);margin-bottom:12px}
+.course h3{font-family:var(--serif);font-size:17px;color:var(--navy);font-weight:600;margin-bottom:16px}
+.pills{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
+.pill{font-size:12.5px;padding:4px 10px;background:var(--tint);color:var(--navy-2);border-radius:2px;letter-spacing:.02em}
+.map{font-size:12.5px;color:var(--muted);padding-top:14px;border-top:1px dashed var(--line)}
+.map b{color:var(--navy);font-weight:500}
+
+/* 技能 */
+.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.skill{background:#fff;border:1px solid var(--line);padding:26px 24px;height:100%}
+.skill .bar{height:3px;width:44px;background:var(--navy);margin-bottom:18px}
+.skill.back .bar{background:var(--accent)}
+.skill h3{font-family:var(--serif);font-size:16.5px;color:var(--navy);margin-bottom:4px}
+.skill .en{font-size:11px;letter-spacing:.14em;color:#93A2B2;margin-bottom:16px}
+.skill ul{list-style:none;font-size:13px;color:#3D4B5A}
+.skill li{padding:7px 0;border-bottom:1px solid #F2F5F9;display:flex;gap:9px}
+.skill li:last-child{border-bottom:0}
+.skill li::before{content:"";width:5px;height:5px;background:#B9C6D4;margin-top:9px;flex:0 0 5px}
+
+/* 经历 */
+.timeline{position:relative;padding-left:26px}
+.timeline::before{content:"";position:absolute;left:6px;top:4px;bottom:4px;width:1px;background:var(--line)}
+.item{position:relative;padding:0 0 34px 0}
+.item::before{content:"";position:absolute;left:-25px;top:8px;width:9px;height:9px;background:#fff;
+  border:2px solid var(--navy);border-radius:50%}
+.item h3{font-family:var(--serif);font-size:17px;color:var(--navy);letter-spacing:.02em}
+.item .meta{font-size:12px;color:var(--accent);letter-spacing:.08em;margin:5px 0 8px}
+.item p{font-size:13px;color:#4A5867;max-width:900px}
+
+/* 项目 */
+.project{display:grid;grid-template-columns:1.25fr .75fr;gap:34px;align-items:start}
+.pcard{background:#fff;border:1px solid var(--line);padding:32px}
+.pcard .tagline{font-size:11.5px;letter-spacing:.16em;color:var(--accent);margin-bottom:12px}
+.pcard h3{font-family:var(--serif);font-size:22px;color:var(--navy);margin-bottom:14px}
+.pcard p{font-size:13.5px;color:#485666;margin-bottom:18px}
+.pcard .role{display:grid;gap:9px;font-size:13px;color:var(--navy-2)}
+.pcard .role span{display:flex;gap:10px}
+.pcard .role span::before{content:"—";color:#B9C6D4}
+.impact{display:grid;gap:14px}
+.impact div{background:var(--tint);padding:18px 20px;border-left:2px solid var(--navy)}
+.impact b{font-family:var(--serif);font-size:24px;color:var(--navy);display:block}
+.impact p{font-size:12px;color:var(--muted)}
+.note{font-size:11.5px;color:#8C9AA8;margin-top:10px;line-height:1.7}
+
+.awards{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.award{font-size:12.5px;padding:8px 13px;border:1px solid var(--line);background:#fff;color:var(--navy-2)}
+.award b{color:var(--accent);font-weight:500}
+
+/* 页脚 */
+footer{background:var(--navy);color:#C3D2E0;padding:44px 0 40px}
+footer .f1{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-end}
+footer h4{font-family:var(--serif);font-size:19px;color:#fff;font-weight:600;letter-spacing:.06em}
+footer p{font-size:12.5px;color:#9FB4C8;margin-top:10px;letter-spacing:.03em}
+footer .f2{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);font-size:11.5px;color:#8CA0B4}
+
+/* 动效 */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:960px){
+  .wrap{padding:0 24px}
+  .hero-grid,.project{grid-template-columns:1fr;gap:34px}
+  h1{font-size:38px}
+  .course-grid,.skill-grid{grid-template-columns:1fr}
+  nav ul{gap:14px}
+  nav a{font-size:12px}
+  .sec-head{flex-direction:column;align-items:flex-start;gap:8px}
+  .sec-head p{text-align:left}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand"><strong>彭 淼</strong><span>贵阳信息科技学院 · 计算机科学与技术 · 2027 届</span></div>
+    <nav>
+      <ul>
+        <li><a href="#intent" class="on">求职意向</a></li>
+        <li><a href="#course">主修课程</a></li>
+        <li><a href="#skill">数字技能</a></li>
+        <li><a href="#exp">实践经历</a></li>
+        <li><a href="#project">项目成果</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ===== 首屏 ===== -->
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">信息工程学院 · 计算机科学与技术</div>
+      <h1>以数字技术<em>扎根乡土</em></h1>
+      <p class="sub">做乡村振兴的青年答卷人</p>
+      <p class="lead">
+        四年里我只做了三件事：写代码、跑村子、带团队。它们最后指向同一个方向——
+        把数字能力带到县域产业最需要它的地方。
+      </p>
+      <div class="intent">
+        <span class="tag hot">西部计划 · 服务乡村建设专项</span>
+        <span class="tag">意向地区：贵州威宁</span>
+        <span class="tag">2027 年 6 月毕业</span>
+        <span class="tag">共青团员</span>
+      </div>
+    </div>
+    <aside class="stats">
+      <div class="cap">四年 · 可核验的经历</div>
+      <div class="grid">
+        <div class="stat"><b>1500<i>+</i></b><p>社团管理人数</p></div>
+        <div class="stat"><b>3714</b><p>服务同学</p></div>
+        <div class="stat"><b>6000<i>+</i></b><p>志愿服务人次</p></div>
+        <div class="stat"><b>10<i>+</i></b><p>省级奖项</p></div>
+      </div>
+      <div class="foot">两段基层实习 · 两个校级学生组织负责人</div>
+    </aside>
+  </div>
+</div>
+
+<!-- ===== 求职意向 ===== -->
+<section id="intent">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="no">01 / OBJECTIVE</div><h2>求职意向</h2></div>
+      <p>目标明确到岗位与地区，路径拆到年。</p>
+    </div>
+    <div class="timeline reveal">
+      <div class="item">
+        <h3>近期 · 服务起步（1—2 年）</h3>
+        <div class="meta">入选西部计划 · 威宁乡镇及以下基层单位</div>
+        <p>参与农业科技推广、农村电商、防返贫动态监测与数字工具普及，完成从学生到基层志愿者的转变。</p>
+      </div>
+      <div class="item">
+        <h3>中期 · 业务骨干（3—5 年）</h3>
+        <div class="meta">县域乡村产业与数字乡村</div>
+        <p>协助特色农产品品牌打造与产销对接，用数字化手段解决基层实际问题。</p>
+      </div>
+      <div class="item">
+        <h3>长期 · 扎根成长</h3>
+        <div class="meta">复合型乡村振兴人才</div>
+        <p>懂技术、懂基层、懂群众，扎根本地持续发展，把个人成长融入家乡产业发展。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 主修课程 ===== -->
+<section id="course" style="background:var(--tint)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="no">02 / COURSEWORK</div><h2>主修课程 · 与岗位能力的对应</h2></div>
+      <p>不列分数，只说明每门课到了岗位上能换成什么能力。</p>
+    </div>
+    <div class="course-grid">
+      <article class="course reveal">
+        <div class="k">编程与实现</div>
+        <h3>从语法到能跑起来的程序</h3>
+        <div class="pills"><span class="pill">C 语言编程</span><span class="pill">Java 实用教程</span><span class="pill">Python 语言设计</span></div>
+        <div class="map">对应能力：<b>数据整理与脚本处理</b>、<b>前端实现</b>、把需求落成可运行的功能。</div>
+      </article>
+      <article class="course reveal">
+        <div class="k">系统与硬件</div>
+        <h3>看得懂系统，也摸得着设备</h3>
+        <div class="pills"><span class="pill">计算机操作系统</span><span class="pill">模拟电子技术</span><span class="pill">数字电子技术基础</span></div>
+        <div class="map">对应能力：<b>系统思维</b>、<b>设备与网络基础</b>，在乡镇做信息化不会只停在软件层。</div>
+      </article>
+      <article class="course reveal">
+        <div class="k">数理与建模</div>
+        <h3>让判断有依据，让数据有口径</h3>
+        <div class="pills"><span class="pill">概率论与数理统计</span><span class="pill">线性代数</span><span class="pill">复变函数与积分变换</span></div>
+        <div class="map">对应能力：<b>统计口径</b>、<b>数据分析</b>、<b>建模意识</b>，对监测台账与产业数据能问出好问题。</div>
+      </article>
+    </div>
+    <p class="note reveal">另有大学物理、大学英语等基础课程，长期支撑技术阅读与英文资料查阅。</p>
+  </div>
+</section>
+
+<!-- ===== 数字技能 ===== -->
+<section id="skill">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="no">03 / SKILLS</div><h2>数字技能</h2></div>
+      <p>如实分三档：能独立做的、自学掌握的、正在补的。</p>
+    </div>
+    <div class="skill-grid">
+      <article class="skill reveal">
+        <div class="bar"></div>
+        <h3>可独立完成</h3>
+        <div class="en">INDEPENDENT</div>
+        <ul>
+          <li>前端网页开发，可独立完成网页项目</li>
+          <li>活动策划与方案落地</li>
+          <li>公开路演与表达</li>
+          <li>视频拍摄剪辑、公众号排版与发布</li>
+          <li>办公软件与数据整理</li>
+        </ul>
+      </article>
+      <article class="skill reveal">
+        <div class="bar"></div>
+        <h3>自学掌握</h3>
+        <div class="en">SELF-TAUGHT</div>
+        <ul>
+          <li>AIGC 工具：辅助调研整理、文案撰写与内容生产</li>
+          <li>ComfyUI 本地工作流搭建</li>
+          <li>开源大模型部署与调用</li>
+          <li>图像生成与风格化创作</li>
+        </ul>
+      </article>
+      <article class="skill back reveal">
+        <div class="bar"></div>
+        <h3>正在补强</h3>
+        <div class="en">IN PROGRESS</div>
+        <ul>
+          <li>后端开发（Spring Boot 技术路线）</li>
+          <li>数据库设计与 SQL 实务</li>
+          <li>基层公文写作</li>
+          <li>计划在服务期前完成针对性训练</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 实践经历 ===== -->
+<section id="exp" style="background:var(--tint)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="no">04 / EXPERIENCE</div><h2>实践经历</h2></div>
+      <p>两段基层、两个学生组织，做的都是“把事办成”。</p>
+    </div>
+    <div class="timeline">
+      <div class="item reveal">
+        <h3>村级基层实习 · 大方县金鸡村村委会</h3>
+        <div class="meta">支书助理</div>
+        <p>村务整理、信息统计、政策宣传与群众服务。第一次知道一份台账背后是多少户人家的实际处境。</p>
+      </div>
+      <div class="item reveal">
+        <h3>街道基层实习 · 黔西市莲城街道办事处</h3>
+        <div class="meta">实习助理</div>
+        <p>台账整理、数据录入、文件归档与政策宣传，熟悉基层单位的信息流转方式。</p>
+      </div>
+      <div class="item reveal">
+        <h3>创新创业协会</h3>
+        <div class="meta">会长 · 管理 1500+ 人</div>
+        <p>社团连续两年获评校级最佳社团、五星社团；公众号推文阅读破万；连办三届校级创新创业挑战赛。</p>
+      </div>
+      <div class="item reveal">
+        <h3>信息工程学院学生会</h3>
+        <div class="meta">执行主席 · 服务 3714 名同学</div>
+        <p>组织公益志愿活动 10 余场、6000+ 人次；带队获校级优秀团组织、优秀志愿者队伍；培育部员 10 余名，带队获省级奖项 10 余项、校级 30 余项。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 项目成果 ===== -->
+<section id="project">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="no">05 / PROJECTS</div><h2>项目成果</h2></div>
+      <p>拿结果说话，也说清楚哪些结果是团队的。</p>
+    </div>
+    <div class="project">
+      <article class="pcard reveal">
+        <div class="tagline">典型案例 · 乡村振兴赛道</div>
+        <h3>荞帮主 · 威宁苦荞科技助农</h3>
+        <p>围绕威宁地标作物苦荞做深加工产品开发与品牌化，探索特色农产品“怎么卖出去”的路径。</p>
+        <div class="role">
+          <span>市场方向核心成员：市场调研、用户与竞品数据整理分析</span>
+          <span>项目路演人：现场宣讲与答辩</span>
+          <span>输出可迁移能力：调研分析、公开表达、助农逻辑认知</span>
+        </div>
+        <p class="note">项目成效为团队口径；个人承担的是调研、数据分析与路演部分。</p>
+      </article>
+      <div class="impact reveal">
+        <div><b>2 倍</b><p>带动农户收入增长（项目口径）</p></div>
+        <div><b>60 人</b><p>直接就业</p></div>
+        <div><b>100 人</b><p>间接就业</p></div>
+      </div>
+    </div>
+    <div class="awards reveal">
+      <span class="award">2025 贵州省中国国际大学生创新大赛 <b>省级银奖</b></span>
+      <span class="award">中国国际大学生创新大赛贵州省赛 <b>铜奖多项</b></span>
+      <span class="award">“挑战杯”贵州省创业计划竞赛 <b>省二、省三各 1 项</b></span>
+      <span class="award">校级二等奖、三等奖</span>
+      <span class="award">2024—2025 年度 <b>双创优秀工作者</b></span>
+      <span class="award">参与设计并授权 <b>外观专利 1 项</b></span>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f1">
+      <div>
+        <h4>把技术用到乡土上，把青春留在乡野间</h4>
+        <p>彭淼 · 贵阳信息科技学院信息工程学院 · 计算机科学与技术 · 2027 届</p>
+      </div>
+      <p>求职意向：西部计划 · 服务乡村建设专项｜贵州威宁</p>
+    </div>
+    <div class="f2">本页为个人求职展示页面，联系方式与证明材料详见个人简历。</div>
+  </div>
+</footer>
+
+<script>
+// 滚动进场
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// 导航高亮
+const secs = [...document.querySelectorAll('section, .hero')];
+const links = [...document.querySelectorAll('nav a')];
+const navIO = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const id = e.target.id || 'intent';
+      links.forEach(a=>a.classList.toggle('on', a.getAttribute('href') === '#' + id));
+    }
+  });
+},{rootMargin:'-40% 0px -55% 0px'});
+secs.forEach(s=>navIO.observe(s));
+</script>
+</body>
+</html>
+
